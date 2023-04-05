@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AdsRouteX</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta name="_token" content="Rv8q4F5FpXsWBUQVd2cHfRddccO3Ue5NAJuytFIH" />
+
+    <link href="/top/assets/fonts/iconfont.css" rel="stylesheet" />
+    <link
+      href="/top/assets/plugins/flag-icon-css/css/flag-icon.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="/top/assets/plugins/perfect-scrollbar/perfect-scrollbar.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/top/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css"
+      rel="stylesheet"
+    />
+
+    <link href="css/app.css" rel="stylesheet" />
+  </head>
+  <body data-base-url="">
+    <script src="https://publisher.adoxen.com/assets/js/spinner.js"></script>
+    <div class="main-wrapper" id="app">
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <a href="#" class="sidebar-brand">
+            <img src="/top/assets/logo.jpg" width="120px" />
+          </a>
+          <div class="sidebar-toggler not-active">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        <div class="sidebar-body">
+          <ul class="nav">
+            <li class="nav-item nav-category">Main</li>
+            <li class="nav-item">
+              <a href="/top/dashboard.html" class="nav-link">
+                <i class="link-icon" data-feather="activity"></i>
+                <span class="link-title">Dashboard</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/Site.html" class="nav-link">
+                <i class="link-icon" data-feather="layout"></i>
+                <span class="link-title">Site</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/Ads.txt.html" class="nav-link">
+                <i class="link-icon" data-feather="file-text"></i>
+                <span class="link-title">Ads.txt</span>
+              </a>
+            </li>
+            <li class="nav-item nav-category">User</li>
+            <li class="nav-item">
+              <a href="/Profile.html" class="nav-link">
+                <i class="link-icon" data-feather="user"></i>
+                <span class="link-title">Profile</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/AdsCode.html" class="nav-link">
+                <i class="link-icon" data-feather="code"></i>
+                <span class="link-title">Ads Code</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="/Histories.html" class="nav-link">
+                <i class="link-icon" data-feather="list"></i>
+                <span class="link-title">Histories</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="page-wrapper">
+        <nav class="navbar">
+          <a href="#" class="sidebar-toggler">
+            <i data-feather="menu"></i>
+          </a>
+          <div class="navbar-content">
+            <form class="search-form">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                    <i data-feather="search"></i>
+                  </div>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="navbarForm"
+                  placeholder="Search here..."
+                />
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown nav-profile">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="profileDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  <img src="/top/assets/logo.jpg" alt="profile" />
+                </a>
+                <div class="dropdown-menu" aria-labelledby="profileDropdown">
+                  <div
+                    class="dropdown-header d-flex flex-column align-items-center"
+                  >
+                    <div class="figure mb-3">
+                      <img src="/top/assets/logo.jpg" alt="profile" />
+                    </div>
+                    <div class="info text-center">
+                      <p class="name font-weight-bold mb-0">Preet Bajwa</p>
+                      <p class="email text-muted mb-3">
+                        <a
+                          href="/cdn-cgi/l/email-protection"
+                          class="__cf_email__"
+                          data-cfemail="4a393f2122392327237a7f0a2d272b232664292527"
+                          >[email&#160;protected]</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  <div class="dropdown-body">
+                    <ul class="profile-nav p-0 pt-3">
+                      <li class="nav-item">
+                        <a href="/logout" class="nav-link">
+                          <i data-feather="log-out"></i>
+                          <span>Log Out</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="page-content">
+          <div class="row">
+            <div class="col-12 col-xl-12 stretch-card">
+              <div class="row flex-grow">
+                <div class="col-md-9 grid-margin stretch-card">
+                  <div class="card" style="background-color: #1565c0">
+                    <div class="card-body">
+                      <div
+                        class="d-flex justify-content-between align-items-baseline"
+                      >
+                        <h6 class="mb-0 text-white">Estimated earnings</h6>
+                      </div>
+                      <div class="row">
+                        <div class="col-4 col-md-12 col-xl-3">
+                          <h6 class="mb-2 mt-2 text-white">Today so far</h6>
+                          <h4 class="mb-2 mt-2 text-white">
+                            $ <span id="todaydlr"></span>
+                          </h4>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-white">
+                              <span class="text-white">
+                                <h5 class="dev">
+                                  <span class="text-white" id="todaydev"></span
+                                  > &uarr;
+                                </h5>
+                              </span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-12 col-xl-3">
+                          <h6 class="mb-2 mt-2 text-white">Yesterday</h6>
+                          <h4 class="mb-2 mt-2 text-white">
+                            $ <span id="yesdlr"></span>
+                          </h4>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-white">
+                              <span class="text-white">
+                                <h5 class="dev">
+                                  <span class="text-white" id="yesdev"></span> &uarr;
+                                </h5>
+                              </span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-12 col-xl-3">
+                          <h6 class="mb-2 mt-2 text-white">Last 7 days</h6>
+                          <h4 class="mb-2 mt-2 text-white">
+                            $ <span class="text-white" id="dlr7"></span>
+                          </h4>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-white">
+                              <span class="text-white">
+                                <h5 class="dev">
+                                  <span class="text-white" id="dev7"></span> &uarr;
+                                </h5>
+                              </span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-6 col-md-12 col-xl-3">
+                          <h6 class="mb-2 mt-2 text-white">This month</h6>
+                          <h4 class="mb-2 mt-2 text-white">
+                            $ <span id="mthdlr"></span>
+                          </h4>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-white">
+                              <span class="text-white">
+                                <h5 class="dev">
+                                  <span class="text-white" id="mthdev"></span> &uarr;
+                                </h5>
+                              </span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 grid-margin stretch-card">
+                  <div class="card" style="background-color: #1565c0">
+                    <div class="card-body">
+                      <div
+                        class="d-flex justify-content-between align-items-baseline"
+                      >
+                        <h6 class="mb-0 text-white">Balance</h6>
+                      </div>
+                      <div class="row">
+                        <div class="col-6 col-md-12 col-xl-12">
+                          <h3 class="mb-2 mt-2 text-white">
+                            $ <span id="bdlr"></span>
+                          </h3>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-white">
+                              <span class="text-white">
+                                <h5 class="bdev">
+                                  <span class="text-white" id="bdev"></span> &uarr;
+                                </h5>
+                              </span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-xl-12">
+              <div class="row flex-grow">
+                <div class="col-md-6 grid-margin stretch-card">
+                  <div class="card">
+                    <div class="card-body">
+                      <div
+                        class="d-flex justify-content-between align-items-baseline"
+                      >
+                        <h6 class="mb-2">Performance</h6>
+                      </div>
+                      <div class="row">
+                        <div class="col-4 col-md-12 col-xl-4">
+                          <h6 class="mb-2 mt-2">Impressions</h6>
+                          <h4 class="mb-2 mt-2"><span id="ae_imp"></span></h4>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-success">
+                              <span id=""></span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-12 col-xl-4">
+                          <h6 class="mb-2 mt-2">Clicks</h6>
+                          <h4 class="mb-2 mt-2"><span id="ae_clicks"></span></h4>
+                          <div class="d-flex align-items-baseline">
+                            <p class="text-success">
+                              <span id=""></span>
+                              <i
+                                data-feather="arrow-up"
+                                class="icon-sm mb-1"
+                              ></i>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+          <script>
+            function myFunction() {
+              var copyText = document.getElementById("myInput");
+              copyText.select();
+              copyText.setSelectionRange(0, 99999);
+              navigator.clipboard.writeText(copyText.value);
+
+              var tooltip = document.getElementById("myTooltip");
+              tooltip.innerHTML = "Copied: " + copyText.value;
+            }
+
+            function outFunc() {
+              var tooltip = document.getElementById("myTooltip");
+              tooltip.innerHTML = "Copy to clipboard";
+            }
+          </script>
+        </div>
+      </div>
+    </div>
+
+    <script src="../Dashboard/script.js"></script>
+    
+    <script src="/top/js/app.js"></script>
+    <script src="/top/assets/plugins/feather-icons/feather.min.js"></script>
+    <script src="/top/assets/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+
+    <script src="/top/assets/plugins/chartjs/Chart.min.js"></script>
+    <script src="/top/assets/plugins/jquery.flot/jquery.flot.js"></script>
+    <script src="/top/assets/plugins/jquery.flot/jquery.flot.resize.js"></script>
+    <script src="/top/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="/top/assets/plugins/apexcharts/apexcharts.min.js"></script>
+    <script src="/top/assets/plugins/progressbar-js/progressbar.min.js"></script>
+
+    <script src="/top/assets/js/template.js"></script>
+
+    <script src="/top/assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="/top/assets/plugins/bootstrap-datepicker/css/bootstrap-datepicker.min.css"></script>
+  </body>
+</html>
